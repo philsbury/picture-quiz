@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catchphrase</title>
+    <link rel="stylesheet" href="/dist/main.css">
+</head>
+
+<body class="overflow-hidden">
+    <div x-data="game()" class="group">
+        <div class="fixed z-50 flex items-center justify-center bg-white rounded-full top-4 left-4 size-20" x-show="!ended">
+            <div class="text-2xl font-bold" x-text="timer"></div>
+        </div>
+        <div class="absolute inset-0 z-10 grid" :style="`--grid: ${data[current]?.grid}`" @click="choose()" @keyup.enter="reveal()" @keyup.right="next()" tabindex="1">
+            <template x-if="data[current]?.grid || false">
+                <template x-for="i in data[current]?.grid * data[current]?.grid">
+                    <div class="w-full h-full bg-red-500 panel"></div>
+                </template>
+            </template>
+        </div>
+        <div class="absolute inset-0 image">
+            <template x-if="initialised">
+                <img :src="data[current].image" class="object-cover w-full h-full" />
+            </template>
+        </div>
+
+        <div class="fixed bottom-0 z-20 flex gap-4 p-3 text-xs bg-white opacity-0 group-hover:opacity-100">
+            {{!-- <button type="button" @click="choose()">Choose</button> --}}
+            <button type="button" @click="reveal()" x-show="!revealed">Reveal</button>
+            <button type="button" @click="next()" x-show="revealed">Next image</button>
+
+        </div>
+        <div class="fixed top-0 right-0 z-50 flex gap-4 p-3 text-xs bg-white opacity-0 group-hover:opacity-100">
+            <button type="button" @click="updateScore('s')">s</button>
+            <button type="button" @click="updateScore('w')">w</button>
+        </div>
+
+        <template x-if="showScore || ended">
+            <div class="absolute inset-0 z-10 flex items-center justify-center font-bold text-white gap-28 text-9xl mix-blend-overlay" :class="ended ? 'text-black' : 'text-white'">
+                <div class="text-center">
+                    Simm
+
+                    <span x-text="score.s" class="block"></span>
+                </div>
+                <div class="text-center">
+                    Worls
+
+                    <span x-text="score.w" class="block"></span>
+                </div>
+            </div>
+        </template>
+    </div>
+
+    {{!-- <p class="absolute z-20 p-2 text-3xl text-green-500 scale-[20] drop-shadow-lg -rotate-12 uppercase transition-all border-4 border-green-500 border-solid top-1/2 left-1/2 opacity-10 rounded-xl stroke-black stroke-2">Blah</p> --}}
+    <script>
+        var json = 'example.json';
+        var timer = 10;
+    </script>
+    <script src="/dist/main.js"></script>
+</body>
+
+</html>
