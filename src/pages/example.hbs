@@ -26,9 +26,9 @@
             </template>
         </div>
 
-        <div class="fixed bottom-0 z-20 flex gap-4 p-3 text-xs bg-white opacity-0 group-hover:opacity-100">
+        <div class="fixed bottom-0 z-20 flex gap-4 p-3 text-xs opacity-0 group-hover:opacity-100" :class="{'bg-white': started || revealed }">
             {{!-- <button type="button" @click="choose()">Choose</button> --}}
-            <button type="button" @click="reveal()" x-show="!revealed">Reveal</button>
+            <button type="button" @click="reveal()" x-show="!revealed && started">Reveal</button>
             <button type="button" @click="next()" x-show="revealed">Next image</button>
 
         </div>

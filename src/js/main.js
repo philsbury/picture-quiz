@@ -16,6 +16,7 @@ global.game = () => ({
     timer: timer,
     timeout: null,
     ended: false,
+    started: false,
     async init() {
         const { json } = window;
 
@@ -58,6 +59,11 @@ global.game = () => ({
         }
     },
     choose() {
+
+        if (!this.started) {
+            this.started = true;
+        }
+
         const panels = Array.from(document.querySelectorAll('.panel:not([data-chosen]'));
 
         let loop = Math.ceil(this.data[this.current].grid * 6);
@@ -154,6 +160,7 @@ global.game = () => ({
             this.countdown = this.data[this.current]?.timer || timer;
             this.initialised = true;
             this.showScore = false;
+            this.started = false;
 
         }, 1000);
     },
