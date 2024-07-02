@@ -40,14 +40,19 @@
         </div>
 
         <template x-if="showScore || ended">
-            <div class="absolute inset-0 z-10 flex items-center justify-center font-bold text-white gap-28 text-9xl mix-blend-overlay" :class="ended ? 'text-black' : 'text-white'">
-                <template x-for="(item, idx) in score">
-                    <div class="text-center">
-                        <span x-text="idx"></span>
-
-                        <span x-text="item" class="block"></span>
-                    </div>
+            <div class="absolute inset-0 z-10 flex flex-col items-center justify-center font-bold text-9xl mix-blend-overlay" :class="ended ? 'text-black' : 'text-white'">
+                <template x-if="ended">
+                    <p class="pb-8 mb-8 text-4xl text-center uppercase border-b-8 w-fit">Final score</p>
                 </template>
+                <div class="flex gap-x-28">
+                    <template x-for="(item, idx) in score">
+                        <div class="text-center">
+                            <span x-text="idx"></span>
+
+                            <span x-text="item" class="block"></span>
+                        </div>
+                    </template>
+                </div>
             </div>
         </template>
     </div>
