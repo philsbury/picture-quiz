@@ -36,6 +36,9 @@ global.game = () => ({
         this.data = data;
         this.initialised = true;
 
+        this.timer = this.data[this.current]?.timer || timer;
+        this.countdown = this.data[this.current]?.timer || timer;
+
     },
     start(key) {
 
