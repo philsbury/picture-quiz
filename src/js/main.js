@@ -11,19 +11,24 @@ global.game = () => ({
     loop: false,
     revealed: false,
     showScore: false,
-    score: {
-        w: 0,
-        s: 0,
-    },
+    score: {},
     timer: timer,
     timeout: null,
     ended: false,
     async init() {
         const { json } = window;
 
+        const players = await (
+            await (
+                fetch('/dist/data/players.json')
+            )
+        ).json()
+
+        players.forEach(el => this.score[el] = 0)
+
         const data = await(
             await(
-                fetch(`/dist/data/${json || 'images1.json'}`)
+                fetch(`/dist/data/${json || 'example.json'}`)
             )
         ).json()
 
