@@ -12,6 +12,7 @@ global.game = () => ({
     revealed: false,
     showScore: false,
     score: {},
+    countdown: timer,
     timer: timer,
     timeout: null,
     ended: false,
@@ -75,7 +76,7 @@ global.game = () => ({
                     if (max === count) {
                         this.pick();
 
-                        this.timer = timer + 1;
+                        this.timer = this.countdown + 1;
 
                         this.tick();
                     }
@@ -138,13 +139,19 @@ global.game = () => ({
         Array.from(document.querySelectorAll('[data-chosen]')).forEach(el => el.removeAttribute('data-chosen', true))
         this.current = this.current + 1;
 
+
         if (undefined === this.data[this.current]) {
             this.ended = true;
             return;
         }
+
         setTimeout(() => {
+            console.log(this.data[this.current]);
+            this.timer = this.data[this.current]?.timer || timer;
+            this.countdown = this.data[this.current]?.timer || timer;
             this.initialised = true;
             this.showScore = false;
+
         }, 1000);
     },
     getRandomInt(max) {
