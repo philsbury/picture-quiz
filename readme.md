@@ -50,7 +50,7 @@ Enter your questions in your new `.json` file
 
 ## Step 12
 
-Update `src/data/players.json` with the names of your players. 2 are included, but more a possible
+Update `src/data/players.json` with the names of your players. 2 are included, but more are possible
 
 ## Step 13
 
