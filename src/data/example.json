@@ -1,67 +1,67 @@
 [
     {
-        "image": "/dist/img/baddies/l-intro-1684280478.jpg",
+        "image": "/dist/img/example.png",
         "grid": 4,
-        "answer": "Gozer"
+        "answer": "Image answer"
     },
     {
-        "image": "/dist/img/baddies/darth-vader.jpeg",
+        "image": "/dist/img/example.png",
         "grid": 4,
-        "answer": "Vader"
+        "answer": "Image answer"
     },
     {
-        "image": "/dist/img/baddies/lion_king_1994_038.jpg?w=1296",
+        "image": "/dist/img/example.png",
         "grid": 4,
-        "answer": "Scar"
+        "answer": "Image answer"
     },
     {
-        "image": "/dist/img/baddies/PDVD_050.PNG.png",
+        "image": "/dist/img/example.png",
         "grid": 5,
-        "answer": "Hans Gruber"
+        "answer": "Image answer"
     },
     {
-        "image": "/dist/img/baddies/Thanos-in-Avengers-Infinity-War.jpg",
+        "image": "/dist/img/example.png",
         "grid": 6,
-        "answer": "Thanos"
+        "answer": "Image answer"
     },
     {
-        "image": "/dist/img/baddies/1985A_Biff.jpg",
+        "image": "/dist/img/example.png",
         "grid": 6,
-        "answer": "Biff"
+        "answer": "Image answer"
     },
     {
-        "image": "/dist/img/baddies/Pennywise.jpg",
+        "image": "/dist/img/example.png",
         "grid": 6,
-        "answer": "Pennywise"
+        "answer": "Image answer"
     },
     {
-        "image": "/dist/img/baddies/rev-1-JOK-14104r_High_Res_JPEGW.jpg?w=1581&h=1054&crop=1",
+        "image": "/dist/img/example.png",
         "grid": 7,
-        "answer": "Joker"
+        "answer": "Image answer"
     },
     {
-        "image": "/dist/img/baddies/the-helmet-rick-moranis-wore-as-dark-helmet-in-spaceballs-is-up-for-auction-social.jpg?format=1500w&content-type=image%2Fjpeg",
+        "image": "/dist/img/example.png",
         "grid": 8,
-        "answer": "Dark Helmet"
+        "answer": "Image answer"
     },
     {
-        "image": "/dist/img/baddies/9X3sTCErveScE24wKdWU3W-1200-80.jpg",
+        "image": "/dist/img/example.png",
         "grid": 9,
-        "answer": "Agent Smith"
+        "answer": "Image answer"
     },
     {
-        "image": "/dist/img/baddies/LordBusiness.jpg",
+        "image": "/dist/img/example.png",
         "grid": 10,
-        "answer": "Lord business"
+        "answer": "Image answer"
     },
     {
-        "image": "/dist/img/baddies/ilm_terminator2.jpg",
+        "image": "/dist/img/example.png",
         "grid": 11,
-        "answer": "T-1000"
+        "answer": "Image answer"
     },
     {
-        "image": "/dist/img/baddies/merlin_135847308_098289a6-90ee-461b-88e2-20920469f96a-superJumbo.jpg",
+        "image": "/dist/img/example.png",
         "grid": 9,
-        "answer": "HAL"
+        "answer": "Image answer"
     }
 ]
