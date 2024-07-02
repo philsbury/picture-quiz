@@ -50,8 +50,12 @@ Enter your questions in your new `.json` file
 
 ## Step 12
 
-You should see your page listed on the [app index](http://localhost:3008/) page. Click the link and you're done.
+Update `src/data/players.json` with the names of your players. 2 are included, but more a possible
 
 ## Step 13
 
-Beer + chelp
+You should see your page listed on the [app index](http://localhost:3008/) page. Click the link and you're done.
+
+## Step 14
+
+Give it a quick test, then beer + chelp

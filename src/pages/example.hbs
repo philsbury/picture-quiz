@@ -33,22 +33,21 @@
 
         </div>
         <div class="fixed top-0 right-0 z-50 flex gap-4 p-3 text-xs bg-white opacity-0 group-hover:opacity-100">
-            <button type="button" @click="updateScore('s')">s</button>
-            <button type="button" @click="updateScore('w')">w</button>
+            <template x-for="(item, idx) in score">
+                <button type="button" @click="updateScore(idx)" x-text="idx">s</button>
+            </template>
+            {{!-- <button type="button" @click="updateScore('w')">w</button> --}}
         </div>
 
         <template x-if="showScore || ended">
             <div class="absolute inset-0 z-10 flex items-center justify-center font-bold text-white gap-28 text-9xl mix-blend-overlay" :class="ended ? 'text-black' : 'text-white'">
-                <div class="text-center">
-                    Simm
+                <template x-for="(item, idx) in score">
+                    <div class="text-center">
+                        <span x-text="idx"></span>
 
-                    <span x-text="score.s" class="block"></span>
-                </div>
-                <div class="text-center">
-                    Worls
-
-                    <span x-text="score.w" class="block"></span>
-                </div>
+                        <span x-text="item" class="block"></span>
+                    </div>
+                </template>
             </div>
         </template>
     </div>
