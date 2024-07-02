@@ -5,7 +5,6 @@ const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 mix
     .js('./src/js/main.js', './docroot/dist')
-    .js('./src/js/bb.js', './docroot/dist')
     .sass('./src/scss/main.scss', './docroot/dist')
     .copyDirectory('./src/img', './docroot/dist/img')
     .copyDirectory('./src/data', './docroot/dist/data')
